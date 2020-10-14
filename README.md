@@ -10,11 +10,21 @@ Docker image for [VIA (VGG Image Annotator)](https://gitlab.com/vgg/via). VGG Im
 
 ## Usage
 
-1. Run `docker run -p 8080:80 jojoee/via:1.0.0`
-2. Access
-- [http://localhost:8080/via-1.x.y/](http://localhost:8080/via-1.x.y/)
-- [http://localhost:8080/via-2.x.y/src/](http://localhost:8080/via-2.x.y/src/)
-- [http://localhost:8080/via-3.x.y/src/html/_via_video_annotator.html](http://localhost:8080/via-3.x.y/src/html/_via_video_annotator.html)
+```
+docker run -p 8080:80 --name ctn_via jojoee/via:1.0.2
+http://localhost:8080/via-1.x.y/
+http://localhost:8080/via-2.x.y/src/
+http://localhost:8080/via-3.x.y/src/html/_via_video_annotator.html
+
+docker run -p 8081:80 --name ctn_via_1xy jojoee/via:1.0.2-1.x.y
+http://localhost:8081/
+
+docker run -p 8082:80 --name ctn_via_2xy jojoee/via:1.0.2-2.x.y
+http://localhost:8082/
+
+docker run -p 8083:80 --name ctn_via_3xy jojoee/via:1.0.2-3.x.y
+http://localhost:8083/html/_via_video_annotator.html
+```
 
 ## Reference
 - [VGG Image Annotator](https://gitlab.com/vgg/via)
@@ -29,5 +39,11 @@ git clone --recurse-submodules https://github.com/jojoee/docker-via
 git submodule init
 git submodule update
 
-docker build -t jojoee/via:1.0.0 .
+docker build -f dockerfiles/Dockerfile -t jojoee/via:0.0.1 .
+docker run -p 8080:80 --name ctn_via jojoee/via:0.0.1
+docker start ctn_via
+
+docker build -f dockerfiles/3.x.y.Dockerfile -t jojoee/via:0.0.1-3.x.y .
+docker run -p 8083:80 --name ctn_via_3xy jojoee/via:0.0.1-3.x.y
+docker start ctn_via_3xy
 ```
