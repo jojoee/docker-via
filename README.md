@@ -11,18 +11,18 @@ Docker image for [VIA (VGG Image Annotator)](https://gitlab.com/vgg/via). VGG Im
 ## Usage
 
 ```
-docker run -p 8080:80 --name ctn_via jojoee/via:1.0.2
+docker run -p 8080:80 --name ctn_via jojoee/via:1.0.3
 http://localhost:8080/via-1.x.y/
 http://localhost:8080/via-2.x.y/src/
 http://localhost:8080/via-3.x.y/src/html/_via_video_annotator.html
 
-docker run -p 8081:80 --name ctn_via_1xy jojoee/via:1.0.2-1.x.y
+docker run -p 8081:80 --name ctn_via_1xy jojoee/via:1.0.3-1.x.y
 http://localhost:8081/
 
-docker run -p 8082:80 --name ctn_via_2xy jojoee/via:1.0.2-2.x.y
+docker run -p 8082:80 --name ctn_via_2xy jojoee/via:1.0.3-2.x.y
 http://localhost:8082/
 
-docker run -p 8083:80 --name ctn_via_3xy jojoee/via:1.0.2-3.x.y
+docker run -p 8083:80 --name ctn_via_3xy jojoee/via:1.0.3-3.x.y
 http://localhost:8083/html/_via_video_annotator.html
 ```
 
