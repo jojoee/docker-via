@@ -24,6 +24,11 @@ http://localhost:8082/
 
 docker run -p 8083:80 --name ctn_via_3xy jojoee/via:1.0.4-3.x.y
 http://localhost:8083/html/_via_video_annotator.html
+
+docker run -p 8084:80 --name ctn_via_latest jojoee/via
+http://localhost:8084/via-1.x.y/
+http://localhost:8084/via-2.x.y/src/
+http://localhost:8084/via-3.x.y/src/html/_via_video_annotator.html
 ```
 
 ## Reference
