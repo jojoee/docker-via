@@ -43,7 +43,18 @@ docker build -f dockerfiles/Dockerfile -t jojoee/via:0.0.1 .
 docker run -p 8080:80 --name ctn_via jojoee/via:0.0.1
 docker start ctn_via
 
-docker build -f dockerfiles/3.x.y.Dockerfile -t jojoee/via:0.0.1-3.x.y .
+# 1.x.y
+docker build -f dockerfiles/Dockerfile.1.x.y -t jojoee/via:0.0.1-1.x.y .
+docker run -p 8081:80 --name ctn_via_1xy jojoee/via:0.0.1-1.x.y
+docker start ctn_via_1xy
+
+# 2.x.y
+docker build -f dockerfiles/Dockerfile.2.x.y -t jojoee/via:0.0.1-2.x.y .
+docker run -p 8082:80 --name ctn_via_2xy jojoee/via:0.0.1-2.x.y
+docker start ctn_via_2xy
+
+# 3.x.y
+docker build -f dockerfiles/Dockerfile.3.x.y -t jojoee/via:0.0.1-3.x.y .
 docker run -p 8083:80 --name ctn_via_3xy jojoee/via:0.0.1-3.x.y
 docker start ctn_via_3xy
 ```
