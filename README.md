@@ -10,9 +10,9 @@ Docker image for [VIA (VGG Image Annotator)](https://gitlab.com/vgg/via). VGG Im
 
 ## Online Example
 
-- /via-1.x.y/
-- /via-2.x.y/src/
-- /via-3.x.y/src/html/_via_video_annotator.html
+- [https://via.jojoee.com/via-1.x.y/](https://via.jojoee.com/via-1.x.y/)
+- [https://via.jojoee.com/via-2.x.y/src/](https://via.jojoee.com/via-2.x.y/src/)
+- [https://via.jojoee.com/via-3.x.y/src/html/_via_video_annotator.html](https://via.jojoee.com/via-3.x.y/src/html/_via_video_annotator.html)
 
 ## Usage
 
